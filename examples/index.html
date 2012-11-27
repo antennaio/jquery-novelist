@@ -1,0 +1,181 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>jQuery Novelist Plugin Demo</title>
+    <meta name="viewport" content="width=1024">
+    <script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+    <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link href="http://fonts.googleapis.com/css?family=Carrois+Gothic" rel="stylesheet"
+          type="text/css">
+    <link href="css/examples.css" rel="stylesheet" type="text/css"/>
+    <script src="../jquery.novelist.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            function changeBorderColor() {
+                $this = $(this);
+                $this.addClass('character-limit-reached');
+                setTimeout(function () {
+                    $this.removeClass('character-limit-reached');
+                }, 500);
+            }
+
+            $('#example-a').novelist({
+                maxCharacters:15,
+                direction:'horizontal',
+                onLimitReached:changeBorderColor
+            });
+
+            $('#example-b').novelist({
+                maxCharacters:20,
+                direction:'horizontal',
+                onLimitReached:changeBorderColor,
+                backgroundImage:'img/custom-background.png'
+            });
+
+            $('#example-c').novelist({
+                onLimitReached:changeBorderColor,
+                onInput:function (value, characters, percent, limit) {
+                    $('.message').html(
+                            characters ? 'You typed ' + characters + ' out of ' + limit + ' characters (' + percent + '%).' : ''
+                    );
+                }
+            });
+
+        });
+    </script>
+</head>
+
+<body>
+
+<div id="wrapper">
+    <a href="http://github.com/netboy/jquery-novelist" class="github">
+        <img
+                src="http://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png"
+                alt="Fork me on GitHub"/>
+    </a>
+
+    <header>
+        <img src="img/typewriter.png" width="150" height="157" border="0"/>
+
+        <h1>jQuery Novelist</h1>
+
+        <h3>Limit user input in textareas or text fields.</h3>
+
+        <blockquote>
+            The jQuery Novelist Plugin will help to keep users from entering too much content into textareas and text
+            fields.<br/>
+            The plugin gives a visual cue about how much content can still be entered as the user types.
+        </blockquote>
+    </header>
+
+    <h2>Examples</h2>
+
+    <div class="block">
+        <div>
+            <form action="">
+                <label for="example-a">Limit - 15 characters, direction - horizontal, custom callback:</label>
+                <input type="text" id="example-a" value="" name="example-a">
+            </form>
+        </div>
+
+        <div>
+            <form action="">
+                <label for="example-b">Limit - 20 characters, direction - horizontal, custom callback, custom
+                    background:</label>
+                <input type="text" id="example-b" value="" name="example-b">
+            </form>
+        </div>
+
+        <div>
+            <form action="" method="">
+                <label for="example-c">Limit - 120 characters, direction - vertical, custom callbacks:</label>
+                <textarea id="example-c" name="example-c" data-max-characters="120"></textarea>
+
+                <div class="message"></div>
+            </form>
+        </div>
+
+    </div>
+
+    <h2>Configuration</h2>
+
+    <div class="block">
+        <strong>maxCharacters:100</strong>
+
+        <p>Character limit. If the limit is not defined, the plugin will try get the value from
+            the 'data-max-characters' attribute of the HTML element. Otherwise, the limit is set to
+            the default value (100).</p>
+
+        <strong>hardLimit:true</strong>
+
+        <p>If set to true, all characters that go over the limit will be truncated.</p>
+
+        <strong>backgroundImage:''</strong>
+
+        <p>Can be used to customize the background image.</p>
+
+        <strong>backgroundScale:false</strong>
+
+        <p>Should the background image be scaled to the same dimensions as the textarea/text field?<br/>
+            This feature relies on CSS3 <a href="http://caniuse.com/#search=background-size" target="_blank">
+                background-size</a> property.</p>
+
+        <strong>direction:'vertical'</strong>
+
+        <p>Can be 'vertical' or 'horizontal'.</p>
+    </div>
+
+    <h2>Callbacks</h2>
+
+    <div class="block">
+        <p>
+            As you may easily guess by its name <strong>onLimitReached</strong> callback is fired when a user
+            reaches the character limit.
+        </p>
+
+<pre>
+$('textarea').novelist({
+  <span>onLimitReached</span>:function(value) {
+    alert(value);
+  }
+});
+</pre>
+
+        <p>
+            The <strong>onInput</strong> callback is fired on every keystroke.
+        </p>
+
+<pre>
+$('textarea').novelist({
+  <span>onInput</span>:function (value, characters, percent, limit) {
+    alert('You typed ' + characters + ' out of ' + limit + ' characters (' + percent + '%).');
+  }
+});
+</pre>
+
+    </div>
+
+    <h2>License</h2>
+
+    <div class="block">
+        <p>
+            Dual licensed under the MIT and GPL licenses:<br/>
+            <a href="http://www.opensource.org/licenses/mit-license.php">http://www.opensource.org/licenses/mit-license.php</a><br/>
+            <a href="http://www.gnu.org/licenses/gpl.html">http://www.gnu.org/licenses/gpl.html</a>
+        </p>
+    </div>
+
+    <h2>Download</h2>
+
+    <div class="block">
+        <a href="http://github.com/netboy/jquery-novelist">Download the plugin from GitHub.</a>
+    </div>
+
+</div>
+
+</body>
+
+</html>

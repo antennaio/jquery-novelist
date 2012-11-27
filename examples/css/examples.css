@@ -1,0 +1,166 @@
+html, body {
+    font-family: 'Carrois Gothic', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.6;
+    background: #f7f7f7 url('../img/lightpaperfibers.png');
+    padding: 0;
+    margin: 0;
+    color: #646464;
+}
+
+#wrapper {
+    margin: auto;
+    width: 100%;
+}
+
+header {
+    display: block;
+    text-align: center;
+    width: 800px;
+    margin: auto;
+    padding: 50px 0 10px 0;
+}
+
+header blockquote {
+    text-align: center;
+    width: 800px;
+    line-height: 1.4;
+    padding: 0 10px 0 10px;
+    margin: 15px 15px 30px 15px;
+}
+
+h1, h2 {
+    color: #333333;
+    font-weight: normal;
+    font-family: 'Carrois Gothic', sans-serif;
+}
+
+h1 {
+    font-size: 68px;
+    line-height: .6;
+    text-shadow: 1px 1px 0 #FAFAFA, 2px 2px 0 rgba(0, 0, 0, 0.5);
+}
+
+h2:before {
+    content: "";
+    width: 100%;
+    display: block;
+    border-top: 1px solid #d4d4d4;
+    padding-top: 30px;
+}
+
+h2 {
+    font-family: 'Carrois Gothic', sans-serif;
+    text-transform: uppercase;
+    border-bottom: 0 none;
+    color: #5F95B1;
+    font-size: 32px;
+    letter-spacing: 1px;
+    line-height: 1;
+    margin-bottom: 20px;
+    text-align: center;
+    text-shadow: 1px 1px 0 #FAFAFA, 2px 2px 0 rgba(136, 136, 136, 0.5);
+}
+
+h3 {
+    font-size: 16px;
+    font-weight: 400;
+    color: #b7b7b7;
+}
+
+label {
+    display: block;
+    clear: both;
+    margin: 20px 0 20px 0;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+a {
+    text-decoration: none;
+    color: #59a6d6;
+}
+
+a:hover {
+    color: #646464;
+}
+
+.github img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    border: 0;
+}
+
+pre {
+    font-family: Monaco, Consolas, "Lucida Console", monospace;
+    font-size: 13px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    text-align: left;
+    width: 800px;
+    padding: 8px;
+    background-color: rgba(255, 255, 255, .8);
+    border: 1px dashed #59a6d6;
+    white-space: pre-wrap;
+    white-space: -moz-pre-wrap !important;
+    white-space: -pre-wrap;
+    white-space: -o-pre-wrap;
+    word-wrap: break-word;
+}
+
+pre span {
+    background: #59a6d6;
+    color: white;
+    padding: 0 5px 0 5px;
+    text-shadow: -1px -1px 0 #5F95B1;
+}
+
+input,
+textarea {
+    font-family: 'Carrois Gothic', sans-serif;
+    font-size: 15px;
+    border: 1px solid #dedede;
+    width: 600px;
+    max-width: 600px;
+    min-width: 600px;
+    padding: 8px;
+    outline: none;
+
+    -moz-box-shadow: inset 2px 2px 3px #efefef;
+    -webkit-box-shadow: inset 2px 2px 3px #efefef;
+    box-shadow: inset 2px 2px 3px #efefef;
+
+    -webkit-transition: background-position 200ms ease, border-color 200ms ease;
+    -moz-transition: background-position 200ms ease, border-color 200ms ease;
+    -o-transition: background-position 200ms ease, border-color 200ms ease;
+}
+
+input:focus,
+textarea:focus {
+    border: 1px solid #bbbbbb;
+}
+
+textarea {
+    height: 120px;
+}
+
+input.character-limit-reached,
+textarea.character-limit-reached {
+    border: 1px solid red;
+}
+
+.message {
+    height: 20px;
+    padding: 3px 0 3px 0;
+    font-size: 13px;
+    color: #646464;
+}
+
+div.block {
+    text-align: center;
+    width: 800px;
+    margin: auto;
+    padding-bottom: 30px;
+}

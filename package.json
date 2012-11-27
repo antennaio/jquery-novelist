@@ -1,0 +1,12 @@
+{
+  "name": "jquery-novelist",
+  "description": "Limit user input in textareas or text fields.",
+  "version": "0.1.0",
+  "main": "./jquery.novelist",
+  "devDependencies": {
+    "mocha": "*",
+    "chai": "*",
+    "jsdom": "*",
+    "jquery": "*"
+  }
+}
