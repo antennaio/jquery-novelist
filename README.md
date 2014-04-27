@@ -8,13 +8,13 @@ How to use
 
 Examples of use are here:
 
-[http://netboy.pl/demo/jquery-novelist/examples/](http://netboy.pl/demo/jquery-novelist/examples/)
+[http://antenna.io/demo/jquery-novelist/examples/](http://antenna.io/demo/jquery-novelist/examples/)
 
 How to run tests
 ----------------
 
 ```
-git clone https://github.com/netboy/jquery-novelist
+git clone https://github.com/antennaio/jquery-novelist
 cd jquery-novelist
 npm install
 ./node_modules/mocha/bin/mocha -R spec

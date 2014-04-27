@@ -1,7 +1,7 @@
 /**
  * jQuery Novelist Plugin
  *
- * http://github.com/netboy/jquery-novelist
+ * http://github.com/antennaio/jquery-novelist
  *
  * Copyright (c) 2012 Kazik Pietruszewski
  *
