@@ -8,7 +8,7 @@ How to use
 
 Examples of use are here:
 
-[http://antenna.io/demo/jquery-novelist/examples/](http://antenna.io/demo/jquery-novelist/examples/)
+[http://antennaio.github.io/jquery-novelist/](http://antennaio.github.io/jquery-novelist/)
 
 How to run tests
 ----------------
